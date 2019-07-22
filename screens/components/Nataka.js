@@ -19,15 +19,15 @@ export default class Nataka extends Component {
     super(props);
     this.state = {
       data: [
-        {id:1, title: "Lorem ipsum dolor",                  time:"1 days a go",    image:"https://lorempixel.com/400/200/nature/6/"},
-        {id:2, title: "Sit amet, consectetuer",             time:"2 minutes a go", image:"https://lorempixel.com/400/200/nature/5/"} ,
-        {id:3, title: "Dipiscing elit. Aenean ",            time:"3 hour a go",    image:"https://lorempixel.com/400/200/nature/4/"}, 
-        {id:4, title: "Commodo ligula eget dolor.",         time:"4 months a go",  image:"https://lorempixel.com/400/200/nature/6/"}, 
-        {id:5, title: "Aenean massa. Cum sociis",           time:"5 weeks a go",   image:"https://lorempixel.com/400/200/sports/1/"}, 
-        {id:6, title: "Natoque penatibus et magnis",        time:"6 year a go",    image:"https://lorempixel.com/400/200/nature/8/"}, 
-        {id:7, title: "Dis parturient montes, nascetur",    time:"7 minutes a go", image:"https://lorempixel.com/400/200/nature/1/"}, 
-        {id:8, title: "Ridiculus mus. Donec quam",          time:"8 days a go",    image:"https://lorempixel.com/400/200/nature/3/"},
-        {id:9, title: "Felis, ultricies nec, pellentesque", time:"9 minutes a go", image:"https://lorempixel.com/400/200/nature/4/"},
+        {id:1, title: "Lorem ipsum dolor sit malet color fen bi patch muragare.",                  time:"1 days a go"},
+        {id:2, title: "Sit amet, consectetuer mi amor alba and ecven me",             time:"2 minutes a go"} ,
+        {id:3, title: "Dipiscing elit. Aenean  isjddnbbk  jjdbd dnd",            time:"3 hour a go"}, 
+        {id:4, title: "Commodo ligula eget dolor aldont pi makufacha andi derty.",         time:"4 months a go"}, 
+        {id:5, title: "Aenean massa. Cum sociis pliasing sjjdkks  judtify content center",           time:"5 weeks a go"}, 
+        {id:6, title: "Natoque penatibus et magnis react native open source code",        time:"6 year a go"}, 
+        {id:7, title: "Dis parturient montes, nascetur github is where i push my code.",    time:"7 minutes a go"}, 
+        {id:8, title: "Ridiculus mus. Donec quam lavey de la lavey",          time:"8 days a go"},
+        {id:9, title: "Felis, ultricies nec, pellentesque portsche engeden my ba dream car", time:"9 minutes a go"},
       ]
     };
   }
@@ -56,8 +56,6 @@ export default class Nataka extends Component {
                     <Text style={styles.time}>{item.time}</Text>
                   </View>
                 </View>
-
-                <Image style={styles.cardImage} source={{uri:item.image}}/>
                 
                 <View style={styles.cardFooter}>
                   <View style={styles.socialBarContainer}>
@@ -175,106 +173,3 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   }
 });
-// const HomeTabs =  createTabNavigator({
-//   Home: {
-//     screen: Home, 
-
-//   },
-//   Search: {
-//     screen: DummyScreen,
-//     navigationOptions: {
-//       tabBarLabel: 'Search',
-//     }
-//   },
-//   Notification: {
-//     screen: DummyScreen,
-//     navigationOptions: {
-//       tabBarLabel: 'Notification',
-//     }
-//   },
-//   DM: {
-//     screen: DummyScreen,
-//     navigationOptions: {
-//       tabBarLabel: 'DM',
-//     }
-//   },
-  
-// }, 
-// {
-//   navigationOptions: ({ navigation }) => ({
-//     tabBarIcon: ({ focused, tintColor }) => {
-//       const { routeName } = navigation.state;
-      
-//       switch (routeName){
-
-//         case "Home":
-//           return <Octicons name={'home'} size={30} color={ focused ? 'rgb(29, 161, 242)':'rgb(136, 153, 166)'} />
-        
-//         case "Search":
-//           return <EvilIcons name={'search'} size={35} color={ focused ?  'rgb(29, 161, 242)':'rgb(136, 153, 166)'} />
-        
-//         case "Notification":
-//           return <Ionicons
-//                   name={'ios-notifications-outline'}
-//                   size={30}
-//                   style={{ color: focused ?  'rgb(29, 161, 242)':'rgb(136, 153, 166)' }}
-//                 />
-        
-//         case "DM":
-//           return <FontAwesome
-//                   name={'envelope-o'}
-//                   size={26}
-//                   style={{ color: focused ? 'rgb(29, 161, 242)':'rgb(136, 153, 166)' }}
-//                 />
-        
-//       }
-//     },
-//   }),
-
-
-//   tabBarPosition: 'bottom',
-//   //tabBarComponent: (props) => <CustomTabComponent {...props}/>,
-//   animationEnabled: true,
-//   tabBarOptions: {
-//     showIcon: true,
-//     showLabel:false,
-//     showIndicator:false,
-//     titleStyle: {
-//         justifyContent: 'center',
-//         alignItems: 'center',
-//     },
-//     style: {
-//         borderWidth: 0,
-//         position:'absolute',
-//         bottom:0,
-//         left:0,
-//         width:'100%',
-//         backgroundColor: 'rgb(27, 42, 51)',
-//         borderColor: 'rgb(27, 42, 51)',
-//         shadowColor:'red',
-//         elevation:2
-//     },
-//     activeBackgroundColor: 'rgb(0, 79, 114)',
-//     inactiveBackgroundColor: 'rgb(27, 42, 51)',
-//     labelStyle: {
-//         fontSize: 14,
-//         color: '#fff',
-//         position: 'relative',
-//         alignSelf: 'center',
-
-//     },
-//     iconStyle:{
-//       marginBottom:5,
-//       marginTop:5
-//     },
-//     tabStyle: {
-//         justifyContent: 'center',
-//         alignItems: 'center',
-        
-//     },
-//     indicatorStyle: {
-//       backgroundColor: 'transparent',
-//   },
-// },
-// });
-// export default createAppContainer(TabNavigator);    
