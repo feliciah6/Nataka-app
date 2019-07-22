@@ -10,6 +10,8 @@ import {
   FlatList,
   Button
 } from 'react-native';
+import { createBottomTabNavigator, createStackNavigator, createAppContainer } from 'react-navigation';  
+
 
 export default class Nataka extends Component {
 
@@ -172,4 +174,107 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   }
-});  
+});
+// const HomeTabs =  createTabNavigator({
+//   Home: {
+//     screen: Home, 
+
+//   },
+//   Search: {
+//     screen: DummyScreen,
+//     navigationOptions: {
+//       tabBarLabel: 'Search',
+//     }
+//   },
+//   Notification: {
+//     screen: DummyScreen,
+//     navigationOptions: {
+//       tabBarLabel: 'Notification',
+//     }
+//   },
+//   DM: {
+//     screen: DummyScreen,
+//     navigationOptions: {
+//       tabBarLabel: 'DM',
+//     }
+//   },
+  
+// }, 
+// {
+//   navigationOptions: ({ navigation }) => ({
+//     tabBarIcon: ({ focused, tintColor }) => {
+//       const { routeName } = navigation.state;
+      
+//       switch (routeName){
+
+//         case "Home":
+//           return <Octicons name={'home'} size={30} color={ focused ? 'rgb(29, 161, 242)':'rgb(136, 153, 166)'} />
+        
+//         case "Search":
+//           return <EvilIcons name={'search'} size={35} color={ focused ?  'rgb(29, 161, 242)':'rgb(136, 153, 166)'} />
+        
+//         case "Notification":
+//           return <Ionicons
+//                   name={'ios-notifications-outline'}
+//                   size={30}
+//                   style={{ color: focused ?  'rgb(29, 161, 242)':'rgb(136, 153, 166)' }}
+//                 />
+        
+//         case "DM":
+//           return <FontAwesome
+//                   name={'envelope-o'}
+//                   size={26}
+//                   style={{ color: focused ? 'rgb(29, 161, 242)':'rgb(136, 153, 166)' }}
+//                 />
+        
+//       }
+//     },
+//   }),
+
+
+//   tabBarPosition: 'bottom',
+//   //tabBarComponent: (props) => <CustomTabComponent {...props}/>,
+//   animationEnabled: true,
+//   tabBarOptions: {
+//     showIcon: true,
+//     showLabel:false,
+//     showIndicator:false,
+//     titleStyle: {
+//         justifyContent: 'center',
+//         alignItems: 'center',
+//     },
+//     style: {
+//         borderWidth: 0,
+//         position:'absolute',
+//         bottom:0,
+//         left:0,
+//         width:'100%',
+//         backgroundColor: 'rgb(27, 42, 51)',
+//         borderColor: 'rgb(27, 42, 51)',
+//         shadowColor:'red',
+//         elevation:2
+//     },
+//     activeBackgroundColor: 'rgb(0, 79, 114)',
+//     inactiveBackgroundColor: 'rgb(27, 42, 51)',
+//     labelStyle: {
+//         fontSize: 14,
+//         color: '#fff',
+//         position: 'relative',
+//         alignSelf: 'center',
+
+//     },
+//     iconStyle:{
+//       marginBottom:5,
+//       marginTop:5
+//     },
+//     tabStyle: {
+//         justifyContent: 'center',
+//         alignItems: 'center',
+        
+//     },
+//     indicatorStyle: {
+//       backgroundColor: 'transparent',
+//   },
+// },
+// });
+// export default createAppContainer(TabNavigator);    
