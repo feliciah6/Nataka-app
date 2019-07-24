@@ -164,110 +164,14 @@ const DrawerNavigatorExample = createDrawerNavigator({
 // bottom tab navigation begins here
 
 
-const NatakaFeed =  createBottomTabNavigator({
-  Tweet: {
-    screen: Tweet,
-    navigationOptions : {
-      tabBarLabel: 'Home',
-    }
-
-  },
-  Search: {
-    screen: About,
-    navigationOptions: {
-      tabBarLabel: 'Search',
-    }
-  },
-  Notification: {
-    screen: About,
-    navigationOptions: {
-      tabBarLabel: 'Notification',
-    }
-  },
-  DM: {
-    screen: About,
-    navigationOptions: {
-      tabBarLabel: 'DM',
-    }
-  },
+// const RootStack = createStackNavigator({
   
-}, 
-{
-  navigationOptions: ({ navigation }) => ({
-    tabBarIcon: ({ focused, tintColor }) => {
-      const { routeName } = navigation.state;
-      
-      switch (routeName){
+//   Nataka: { screen:Nataka },
 
-        case "Home":
-          return <Octicons name={'home'} size={30} color={ focused ? 'rgb(29, 161, 242)':'rgb(136, 153, 166)'} />
-        
-        case "Search":
-          return <EvilIcons name={'search'} size={35} color={ focused ?  'rgb(29, 161, 242)':'rgb(136, 153, 166)'} />
-        
-        case "Notification":
-          return <Ionicons
-                  name={'ios-notifications-outline'}
-                  size={30}
-                  style={{ color: focused ?  'rgb(29, 161, 242)':'rgb(136, 153, 166)' }}
-                />
-        
-        case "DM":
-          return <FontAwesome
-                  name={'envelope-o'}
-                  size={26}
-                  style={{ color: focused ? 'rgb(29, 161, 242)':'rgb(136, 153, 166)' }}
-                />
-        
-      }
-    },
-  }),
+// });
+
+// const App = createAppContainer(RootStack);
 
 
-  tabBarPosition: 'bottom',
-  //tabBarComponent: (props) => <CustomTabComponent {...props}/>,
-  animationEnabled: true,
-  tabBarOptions: {
-    showIcon: true,
-    showLabel:false,
-    showIndicator:false,
-    titleStyle: {
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-    style: {
-        borderWidth: 0,
-        position:'absolute',
-        bottom:0,
-        left:0,
-        width:'100%',
-        backgroundColor: 'rgb(27, 42, 51)',
-        borderColor: 'rgb(27, 42, 51)',
-        shadowColor:'red',
-        elevation:2
-    },
-    activeBackgroundColor: 'rgb(0, 79, 114)',
-    inactiveBackgroundColor: 'rgb(27, 42, 51)',
-    labelStyle: {
-        fontSize: 14,
-        color: '#fff',
-        position: 'relative',
-        alignSelf: 'center',
-
-    },
-    iconStyle:{
-      marginBottom:5,
-      marginTop:5
-    },
-    tabStyle: {
-        justifyContent: 'center',
-        alignItems: 'center',
-        
-    },
-    indicatorStyle: {
-      backgroundColor: 'transparent',
-  },
-},
-});
  
 export default createAppContainer(DrawerNavigatorExample);

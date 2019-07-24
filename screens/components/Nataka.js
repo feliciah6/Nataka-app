@@ -10,10 +10,15 @@ import {
   FlatList,
   Button
 } from 'react-native';
-import { createBottomTabNavigator, createStackNavigator, createAppContainer } from 'react-navigation';  
+import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import FontAwesome from 'react-native-vector-icons/FontAwesome' 
+import { createBottomTabNavigator, createStackNavigator, createAppContainer } from 'react-navigation'; 
+import Contact from './Contact'; 
+import About from './About'; 
 
 
-export default class Nataka extends Component {
+class Nataka extends React.Component {
 
   constructor(props) {
     super(props);
@@ -86,6 +91,34 @@ export default class Nataka extends Component {
     );
   }
 }
+class DiscoverScreen extends React.Component {  
+  render() {  
+    return (  
+        <View style={styles.container}>  
+          <Text>Discover Screen</Text>  
+        </View>  
+    );  
+  }  
+}  
+class WriteScreen extends React.Component {  
+    render() {  
+        return (  
+            <View style={styles.container}>  
+                <Text>Write Screen</Text>  
+            </View>  
+        );  
+    }  
+}  
+class MessageScreen extends React.Component {  
+    render() {  
+        return (  
+            <View style={styles.container}>  
+                <Text>Message Screen</Text>  
+            </View>  
+        );  
+    }  
+}  
+
 
 const styles = StyleSheet.create({
   container:{
@@ -173,3 +206,72 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   }
 });
+
+const TabNavigator = createMaterialBottomTabNavigator(  
+    {  
+        Nataka: { screen: Nataka,  
+            navigationOptions:{  
+                tabBarLabel:'Home',  
+                tabBarIcon: ({ tintColor }) => (  
+                    <View> 
+                    <FontAwesome
+                  name={'home'}
+                  size={27}
+                  style={{ color:tintColor }}
+                /> 
+                    </View>),  
+            }  
+        },  
+        Discover: { screen: DiscoverScreen,  
+            navigationOptions:{  
+                tabBarLabel:'Discover',  
+                tabBarIcon: ({ tintColor }) => (  
+                    <View>  
+                        <FontAwesome
+                  name={'hashtag'}
+                  size={27}
+                  style={{ color:tintColor }}
+                />  
+                    </View>),  
+                activeColor: '#f60c0d',  
+                inactiveColor: '#f65a22',  
+                barStyle: { backgroundColor: '#f69b31' },  
+            }  
+        },  
+        Write: { screen: WriteScreen,  
+            navigationOptions:{  
+                tabBarLabel:'Write',  
+                tabBarIcon: ({ tintColor }) => (  
+                    <View> 
+                  <FontAwesome
+                  name={'pencil'}
+                  size={27}
+                  style={{ color:tintColor }}
+                />   
+                    </View>),  
+                activeColor: '#615af6',  
+                inactiveColor: '#46f6d7',  
+                barStyle: { backgroundColor: '#67baf6' },  
+            }  
+        },  
+        Message: {  
+            screen: MessageScreen,  
+            navigationOptions:{  
+                tabBarLabel:'DM',  
+                tabBarIcon: ({ tintColor }) => (  
+                    <View>  
+                        <Icon style={[{color: tintColor}]} size={27} name={'message'}/>  
+                    </View>),  
+            }  
+        },  
+    },  
+    {  
+      initialRouteName: "Nataka",  
+      activeColor: '#f0edf6',  
+      inactiveColor: '#226557',  
+      barStyle: { backgroundColor: '#1EA1F2' },  
+    },  
+);  
+  
+export default createAppContainer(TabNavigator);  
+

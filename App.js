@@ -25,7 +25,7 @@ export default class Home extends Component<{}> {
 
     return (
       <View style={styles.container}>
-        <StatusBar barStyle="light-content" backgroundColor="#014422" />
+        <StatusBar barStyle="light-content" backgroundColor="#1EA1F2" />
         <Login navigation={this.props.navigation} />
       </View>
     );
